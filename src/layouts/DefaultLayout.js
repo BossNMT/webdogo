@@ -1,0 +1,59 @@
+import React, { Suspense } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { Layout } from 'antd';
+import Loadable from 'react-loadable';
+import routes from 'src/routes'
+import PermissionContent from 'middleware/PermissionContent';
+import { Spin } from 'antd';
+import Header from './Header';
+
+const { Content } = Layout;
+
+const loading = () => (
+  // <div className="animated fadeIn text-center">Loading 1...</div>
+  <Spin></Spin>
+);
+
+const Page404 = Loadable({
+  loader: () => import('modules/Commons/_views/Page404'),
+  loading
+});
+
+const DefaultLayout = () => {
+
+  return (
+    <Layout
+      className="site-layout"
+      style={{ minHeight: '100vh' }}
+    >
+      <Suspense fallback={loading()}>
+        <Header />
+      </Suspense>
+      <Layout>
+        <Content>
+          <div className="bg-main">
+            <Suspense fallback={loading()}>
+              <Switch>
+                {routes.map((route, idx) => {
+                  return route.component ? (
+                    <PermissionContent
+                      key={idx}
+                      path={route.path}
+                      exact
+                      name={route.name}
+                      middle={route.middleware}
+                      render={props => <route.component {...props} />}
+                    />
+                  ) : null;
+                })}
+                <Route component={Page404} />
+              </Switch>
+            </Suspense>
+          </div>
+        </Content>
+      </Layout>
+    </Layout>
+  );
+};
+
+export default DefaultLayout;

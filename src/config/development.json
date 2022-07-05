@@ -1,0 +1,7 @@
+{
+  "env": "development",
+  "apiUrl": "http://103.130.219.250:1337/api/",
+  "user_token_key": "ustkrohtodev",
+  "user_profile_key": "usinforohtodev",
+  "user_refresh_token_key": "usretkrohtodev"
+}

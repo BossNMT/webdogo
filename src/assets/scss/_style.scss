@@ -1,0 +1,116 @@
+@import 'variables';
+@import 'icon';
+@import 'custom-ant.scss';
+@import 'btn';
+@import 'general';
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&display=swap');
+
+.App {
+  font-family: 'Chakra Petch', sans-serif;
+  // header
+  .quill-better-table-wrapper {
+    table {
+      border: 1px solid black;
+      tr,td {
+        border: 1px solid black;
+      }
+    }
+  }
+  .header {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    &__logo {
+      margin-top: 16px;
+      img {
+        width: 6%;
+      }
+    }
+
+    &__menu {
+      margin-top: 20px;
+      gap: 36px;
+
+      &__item {
+        display: block;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #3B3B3B;
+        padding-bottom: 8px;
+        // border-bottom: 4px solid #B8741A;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .active {
+        border-bottom: 4px solid #B8741A;
+        color: #B8741A;
+      }
+    }
+  }
+
+  .breadcrumb {
+    margin-top: 24px;
+    height: 250px;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(0, 0, 0, .85);
+    }
+
+    &__info {
+      position: relative;
+      z-index: 1;
+
+      h1 {
+        font-weight: 650;
+        font-size: 32px;
+        color: #fff;
+        text-align: center;
+      }
+
+      p {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+
+        span {
+          color: #B8741A;
+        }
+      }
+    }
+  }
+  // filter bar
+  .filter-bar {
+    margin-bottom: 20px;
+    &__pophover {
+      border: 1px solid $gray_border_3;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+  }
+}
+.layout-loading {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
