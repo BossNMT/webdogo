@@ -6,6 +6,7 @@ import routes from 'src/routes'
 import PermissionContent from 'middleware/PermissionContent';
 import { Spin } from 'antd';
 import Header from './Header';
+import Footer from './Footer';
 
 const { Content } = Layout;
 
@@ -52,6 +53,9 @@ const DefaultLayout = () => {
           </div>
         </Content>
       </Layout>
+      <Suspense fallback={loading()}>
+        <Footer />
+      </Suspense>
     </Layout>
   );
 };
