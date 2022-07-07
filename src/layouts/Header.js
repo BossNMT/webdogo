@@ -26,7 +26,7 @@ const Header = () => {
           <Link to="/mau-nha-go" className={location == '/mau-nha-go' || location.split('/')[1] == 'mau-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>MẪU NHÀ GỖ</p>
           </Link>
-          <Link to="/du-an" className={location == '/du-an' ? 'header__menu__item active' : 'header__menu__item'}>
+          <Link to="/du-an" className={location == '/du-an' || location.split('/')[1] == 'du-an' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>DỰ ÁN</p>
           </Link>
           <Link to="/kien-thuc-nha-go" className={location == '/kien-thuc-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
