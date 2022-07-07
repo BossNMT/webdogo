@@ -168,17 +168,36 @@
 // ANT TAB
 .ant-tabs {
   &-nav-wrap {
-    border-bottom: 1px solid $gray_border;
+    justify-content: center;
   }
   &-tab {
+    &-btn {
+      font-size: 16px;
+      padding: 4px 8px;
+      text-transform: uppercase;
+
+      &:hover {
+        font-weight: 600 !important;
+        background-color: #B8741A;
+        color: #fff !important;
+        transition: all 0.2s;
+      }
+    }
     &-active {
       .ant-tabs-tab-btn {
         font-weight: 600 !important;
-        color: $black;
+        background-color: #B8741A;
+        color: #fff !important;
+        transition: all 0.2s;
       }
     }
   }
+  .ant-tabs-ink-bar {
+    display: none !important;
+  }
 }
+
+
 .ant-divider {
   border-color: $gray_border;
 }
@@ -346,4 +365,9 @@
 
 .ant-switch-checked {
   background-color: $green-done;
+}
+
+.ant-image {
+  width: 100%;
+  height: 100%;
 }

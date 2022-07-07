@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { Suspense, useEffect } from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import { Layout } from 'antd';
 import Loadable from 'react-loadable';
 import routes from 'src/routes'
@@ -21,6 +21,11 @@ const Page404 = Loadable({
 });
 
 const DefaultLayout = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <Layout

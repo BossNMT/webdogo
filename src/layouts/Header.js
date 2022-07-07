@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation().pathname;
+  console.log(location)
 
   return (
     <header className="header d-flex justify-content-between align-items-center">
@@ -22,7 +23,7 @@ const Header = () => {
           <Link to="/gioi-thieu" className={location == '/gioi-thieu' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>GIỚI THIỆU</p>
           </Link>
-          <Link to="/mau-nha-go" className={location == '/mau-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
+          <Link to="/mau-nha-go" className={location == '/mau-nha-go' || location.split('/')[1] == 'mau-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>MẪU NHÀ GỖ</p>
           </Link>
           <Link to="/du-an" className={location == '/du-an' ? 'header__menu__item active' : 'header__menu__item'}>
