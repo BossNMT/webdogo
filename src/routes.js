@@ -1,11 +1,11 @@
 import React from 'react';
 // import PermissionData from './middleware/PermissionData'
 const Home = React.lazy(() => import('./modules/Home/view'));
-const WorkList = React.lazy(() => import('work/_views/WorkList'))
+const Info = React.lazy(() => import('./modules/Info/view'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' , component: Home },
-  { path: '/work', exact: true, component: WorkList }
+  { path: '/gioi-thieu', exact: true, component: Info }
   
 ]
 
