@@ -6,6 +6,8 @@ const Product = React.lazy(() => import('./modules/Product/view'));
 const ProDuctDetail = React.lazy(() => import('./modules/Product/components/ProductDetail'));
 const DuAn = React.lazy(() => import('./modules/DuAn/view'));
 const DuAnDetail = React.lazy(() => import('./modules/DuAn/components/DuAnDetail'));
+const KienThuc = React.lazy(() => import('./modules/KienThuc/view'));
+const KienThucDetail = React.lazy(() => import('./modules/KienThuc/components/KienThucDetail'));
 
 
 const routes = [
@@ -15,6 +17,8 @@ const routes = [
   { path: '/mau-nha-go/:id', exact: true, component: ProDuctDetail },
   { path: '/du-an', exact: true, component: DuAn },
   { path: '/du-an/:id', exact: true, component: DuAnDetail },
+  { path: '/kien-thuc-nha-go', exact: true, component: KienThuc },
+  { path: '/kien-thuc-nha-go/:id', exact: true, component: KienThucDetail },
 ]
 
 export default routes;

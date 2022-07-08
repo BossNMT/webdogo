@@ -29,14 +29,14 @@ export const getDuAn = () => {
 }
 
 export const getListDuAn = () => {
-  let apiEndpoint = '/list-du-ans?populate=*';
+  let apiEndpoint = '/list-du-ans?populate=*&sort=createdAt:DESC';
   return HttpService.get(apiEndpoint).then(res => {
     return res || {}
   }).catch(() => { return false });
 }
 
 export const getListKỉenThuc = () => {
-  let apiEndpoint = '/kien-thuc-nha-gos?populate=*';
+  let apiEndpoint = '/kien-thuc-nha-gos?populate=*&sort=createdAt:DESC';
   return HttpService.get(apiEndpoint).then(res => {
     return res || {}
   }).catch(() => { return false });

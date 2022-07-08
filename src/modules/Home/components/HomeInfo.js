@@ -25,7 +25,7 @@ export default () => {
           <img src={`${APP_CONFIG.dataUrl}${data?.img.data.attributes.url}`} alt='Info' />
         </div>
       </div>
-      <Link style={{ marginTop: '30px' }} className='BUTTON-XEMTHEM'>
+      <Link to="/gioi-thieu" style={{ marginTop: '30px' }} className='BUTTON-XEMTHEM'>
         <p>XEM THÊM</p>
       </Link>
     </div>

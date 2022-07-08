@@ -20,7 +20,7 @@ export default ({ id }) => {
             <div className='item' key={index}>
                 <Link to={`/du-an/${item.id}`}>
                   <div className='item__img'>
-                      <img src={`${APP_CONFIG.dataUrl}${item.attributes.img.data[0].attributes.url}`} alt='Khach Hang' />
+                      <img src={`${APP_CONFIG.dataUrl}${item.attributes.img.data[0].attributes.url}`} alt='Du An' />
                   </div>
                 </Link>
                 <Link to={`/du-an/${item.id}`}><h2>{item.attributes.title}</h2></Link>
