@@ -10,7 +10,7 @@ const Header = () => {
     <header className="header d-flex justify-content-between align-items-center">
       <div className='full-width'>
         <div className='d-flex justify-content-between' style={{ padding: '4px 16px', background: '#db952b' }}>
-          <p style={{ margin: 0, color: '#fff' }} >HOTLINE: 0933.666.929</p>
+          <p style={{ margin: 0, color: '#fff' }} >HOTLINE: 092.124.9999 (chị Thủy) - 0915.646.999 (anh Ngọc)</p>
           <p style={{ margin: 0, color: '#fff' }}>EN | VI</p>
         </div>
         <Link to="/" className='header__logo d-flex-center'>

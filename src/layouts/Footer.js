@@ -14,17 +14,15 @@ export default () => {
         </div>
         <div className='footer__info'>
           <div className='footer__info__item'>
-            <h3>CÔNG TY TNHH GỖ GIANG</h3>
+            <h3>CÔNG TY TNHH NỘI THẤT MINH NGỌC HÀ NỘI</h3>
             <Divider />
-            <p>Văn Phòng: số 17, TT11, Khu Đô Thị Xuân Phương Foresa, Nam Từ Liêm, Hà Nội.</p>
+            <p>Địa chỉ xưởng: khu công nghiệp xã Vân Phúc, Phúc Thọ, Hà Nội</p>
             <Divider />
-            <p>Địa Chỉ Xưởng 01 : số 03 , Khu Công Nghiệp xã Chàng Sơn – Thạch Thất – Hà Nội.</p>
+            <p>Liên hệ: 092.124.9999 (chị Thủy) - 0915.646.999 (anh Ngọc)</p>
             <Divider />
-            <p>Liên hệ: 0933.666.929 (GĐ Điều Hành,Kinh Doanh) - Phạm Sơn</p>
+            <p>Email: noithatminhngoc.vn@gmail.com</p>
             <Divider />
-            <p>gogiang.kd@gmail.com</p>
-            <Divider />
-            <p>8:30 - 18:00 tất cả các ngày trong tuần</p>
+            <p>Làm việc: 8h - 18h tất cả các ngày trong tuần</p>
             <Divider />
           </div>
           <div className='footer__info__item'>
