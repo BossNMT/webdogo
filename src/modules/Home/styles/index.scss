@@ -1,51 +1,130 @@
 .Home {
     &__info {
-        width: 70%;
+        width: 80%;
         margin: 60px auto;
         // margin-top: 60px;
 
         &__title {
-            font-size: 35px;
-            color: #551E00;
+            width: 49%;
+            font-size: 26px;
+            color: #f2d77d;
             text-align: center;
             font-weight: 600;
+            margin: 0 auto;
         }
 
-        img {
-            width: 100%;
-            min-height: 350px;
-            object-fit: cover;
+        &__icon {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            .item {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 50%;
+                }
+
+                p {
+                    margin-top: 16px;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__img {
+            img {
+                width: 100%;
+                // min-height: 350px;
+                object-fit: cover;
+            }
         }
     }
 
-    &__DanhHieu {
-        width: 70%;
+    &__DichVuNoiBat {
+        width: 90%;
         margin: 70px auto;
 
-        p {
-            width: 70%;
-            text-align: center;
-            margin: 0 auto;
-            font-size: 18px;
+        .item {
+            width: 32%;
+            position: relative;
+            
+            &__title {
+                position: absolute;
+                bottom: 0;
+                // transform: translate(-50%);
+                width: 100%;
+                padding: 15px 5px;
+                background: rgba(17,17,17,0.6);
+
+                a {
+                    display: block;
+                    text-align: center;
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    color: #fff;
+
+                    &:hover {
+                        color: #f2d77d;
+                        transition: all 0.25s;
+                    }
+                }
+            }
         }
+
     }
 
-    &__MauNhaGo {
-        width: 70%;
+    &__MauThietKeNoiThat {
+        width: 90%;
         margin: 80px auto 0 auto;
-        padding: 40px 0;
 
-        a {
-            &:hover {
-                opacity: 0.6;
-                transition: all 0.25s;
+        &__list {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .item {
+                width: 32%;
+                position: relative;
+                margin-bottom: 30px;
+                
+                &__title {
+                    position: absolute;
+                    bottom: 0;
+                    // transform: translate(-50%);
+                    width: 100%;
+                    padding: 15px 5px;
+                    background: rgba(17,17,17,0.6);
+
+                    a {
+                        display: block;
+                        text-align: center;
+                        margin: 0;
+                        font-size: 18px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        color: #fff;
+
+                        &:hover {
+                            color: #f2d77d;
+                            transition: all 0.25s;
+                        }
+                    }
+                }
             }
         }
     }
 
     &__DuAn {
-        width: 70%;
-        margin: 70px auto;
+        width: 90%;
+        margin: 80px auto 0 auto;
 
         p {
             width: 70%;
@@ -167,6 +246,171 @@
                         color: #007bff;
                     }
                 }
+            }
+        }
+    }
+
+    &__ThongTinVe {
+        width: 80%;
+        margin: 80px auto 0 auto;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+
+            .right {
+                width: 48%;
+                display: flex;
+                justify-content: space-between;
+
+                &__info {
+                    width: 86%;
+
+                    h4 {
+                        color: #f2d77d;
+                        font-size: 20px;
+                        font-weight: 600;
+                        text-align: right;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        text-align: justify;
+                    }
+                }
+
+                .img {
+                    width: 10%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .left {
+                width: 48%;
+                display: flex;
+                justify-content: space-between;
+
+                &__info {
+                    width: 86%;
+
+                    h4 {
+                        color: #f2d77d;
+                        font-size: 20px;
+                        font-weight: 600;
+                        // text-align: right;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        text-align: justify;
+                    }
+                }
+
+                .img {
+                    width: 10%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__TuVan {
+        width: 80%;
+        margin: 80px auto 0 auto;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .active {
+                width: 48%;
+                
+                h5 {
+                    font-size: 24px;
+                    color: #fff;
+                    font-weight: 600;
+                    margin-top: 8px;
+                }
+
+                a {
+                    &:hover {
+                        h5 {
+                            color: #dc8907;
+                            transition: all 0.25s;
+                        }
+                    }
+                }
+
+                p {
+                    display: -webkit-box;
+                    line-height: 1.4;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .list {
+                width: 48%;
+
+                .item {
+                    display: flex;
+                    gap: 20px;
+                    height: 120px;
+                    margin-bottom: 30px;
+
+                    a {
+                        display: block;
+                        width: 30%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &__info {
+                        width: 60%;
+
+                        a {
+                            width: 100%;
+
+                            h5 {
+                                color: #fff;
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+
+                            &:hover {
+                                h5 {
+                                    color: #dc8907;
+                                    transition: all 0.25s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .item + .item {
+                    border-top: 1px solid #fff;
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        .XEMTHEM {
+            font-style: italic;
+            color: #dc8907;
+            
+            &:hover {
+                text-decoration: underline;
             }
         }
     }

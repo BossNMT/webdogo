@@ -16,18 +16,20 @@ export default () => {
 
     const handleCallApiGetImg = () => {
         getListImgSlider()
-            .then(res => setData(res.data.data[0].attributes.img.data))
+            .then(res => setData(res.data.data))
     }
 
     return (
-        <Carousel autoplay style={{ marginTop: '16px' }}>
-            {data?.map((item, index) => {
-                return (
-                    <div style={{ height: '50px' }} key={index}>
-                        <img style={{ height: '100%' }} src={`${APP_CONFIG.dataUrl}${item.attributes.url}`} alt='Slider' />
-                    </div>
-                )
-            })}
-        </Carousel>
+        <div style={{ borderBottom: '4px solid #f2d77d' }}>
+            <Carousel autoplay>
+                {data?.map((item, index) => {
+                    return (
+                        <div style={{ height: '50px' }} key={index}>
+                            <img style={{ height: '100%' }} src={`${APP_CONFIG.dataUrl}${item.attributes.img.data.attributes.url}`} alt='Slider' />
+                        </div>
+                    )
+                })}
+            </Carousel>
+        </div>
     )
 }

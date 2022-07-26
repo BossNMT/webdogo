@@ -1,0 +1,43 @@
+.QuyTrinhThietKe {
+    width: 85%;
+    margin: 0 auto;
+
+    h2 {
+        color: #f2d77d;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 30px;
+
+        .item {
+            width: 32%;
+            border: 1px solid #f2d77d;
+            border-radius: 10px;
+            padding: 24px 24px;
+            margin-bottom: 30px;
+            position: relative;
+
+            &__count {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 30px;
+            }
+
+            h4 {
+                color: #f2d77d;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

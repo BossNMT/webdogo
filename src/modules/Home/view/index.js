@@ -1,21 +1,25 @@
 import React from 'react';
 import HomeSilder from '../components/HomeSilder';
 import HomeInfo from '../components/HomeInfo';
-import DanhHieu from '../components/DanhHieu';
-import MauNhaGo from '../components/MauNhaGo';
+import DichVuNoiBat from '../components/DichVuNoiBat';
+import MauThietKeNoiThat from '../components/MauThietKeNoiThat';
 import DuAn from '../components/DuAn';
-import KienThuc from '../components/KienThuc';
+import QuyTrinh from '../components/QuyTrinh';
 import '../styles/index.scss'
+import ThongTinVe from '../components/ThongTinVe';
+import TuVanNoiThat from '../components/TuVanNoiThat';
 
 export default () => {
   return (
     <div className="Home">
       <HomeSilder />
       <HomeInfo />
-      <DanhHieu />
-      <MauNhaGo />
+      <DichVuNoiBat />
+      <MauThietKeNoiThat />
       <DuAn />
-      <KienThuc />
+      <QuyTrinh />
+      <ThongTinVe />
+      <TuVanNoiThat />
     </div>
   )
 }

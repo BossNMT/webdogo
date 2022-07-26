@@ -4,6 +4,8 @@ import { history } from 'utils/history';
 import Loadable from 'react-loadable';
 import 'antd/dist/antd.css'
 import 'assets/scss/_style.scss';
+import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick-theme.css';
 
 const loading = () => (
   <div className="animated fadeIn pt-3 text-center">Loading...</div>

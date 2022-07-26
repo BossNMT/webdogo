@@ -1,5 +1,9 @@
 import React, { } from 'react';
 import Logo from 'assets/images/logo.png';
+import Youtube from 'assets/images/youtube.png';
+import tiktok from 'assets/images/tiktok.png';
+import fb from 'assets/images/fb.png';
+
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -9,13 +13,44 @@ const Header = () => {
   return (
     <header className="header d-flex justify-content-between align-items-center">
       <div className='full-width'>
-        <div className='d-flex justify-content-between' style={{ padding: '4px 16px', background: '#db952b' }}>
-          <p style={{ margin: 0, color: '#fff' }} >HOTLINE: 092.124.9999 (chị Thủy) - 0915.646.999 (anh Ngọc)</p>
-          <p style={{ margin: 0, color: '#fff' }}>EN | VI</p>
+        <div className='d-flex justify-content-between' style={{ padding: '4px 16px', background: '#111' }}>
+          <p style={{ color: '#fff', width: '85%', margin: '0 auto', fontSize: '16px' }} >Thời gian làm việc: 8h30 – 17h30</p>
         </div>
-        <Link to="/" className='header__logo d-flex-center'>
-          <img src={Logo} alt='Logo' />
-        </Link>
+        <div style={{ background: '#1f1c19' }}>
+          <div className='d-flex header__logo'>
+            <div className='header__logo__logo'>
+              <Link to="/" className='d-flex-center'>
+                <img src={Logo} alt='Logo' />
+              </Link>
+            </div>
+            <div className='header__logo__info'>
+              <Link to="/" className='d-flex-center item'>
+                <img src={Youtube} alt='Youtube' />
+                <div>
+                  <p>Youtube</p>
+                  <h4>MAXHOMETV</h4>
+                </div>
+              </Link>
+              <Link to="/" className='d-flex-center item'>
+                <img src={tiktok} alt='TikTok' />
+                <div>
+                  <p>Tiktok</p>
+                  <h4>XAYDUNGNHACUA</h4>
+                </div>
+              </Link>
+              <Link to="/" className='d-flex-center item'>
+                <img src={fb} alt='Facebook' />
+                <div>
+                  <p>Facebook</p>
+                  <h4>MAXHOMEVN</h4>
+                </div>
+              </Link>
+              <div className='item'>
+                <a title="Hotline" href="tel:0927748888" rel="noopener noreferrer">Hotline: 092.774.8888</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className='header__menu d-flex-center'>
           <Link to="/" className={location == '/' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>TRANG CHỦ</p>
@@ -23,14 +58,20 @@ const Header = () => {
           <Link to="/gioi-thieu" className={location == '/gioi-thieu' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>GIỚI THIỆU</p>
           </Link>
-          <Link to="/mau-nha-go" className={location == '/mau-nha-go' || location.split('/')[1] == 'mau-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
-            <p>MẪU NHÀ GỖ</p>
+          <Link to="/dich-vu" className={location == '/dich-vu' || location.split('/')[1] == 'dich-vu' ? 'header__menu__item active' : 'header__menu__item'}>
+            <p>DỊCH VỤ</p>
           </Link>
-          <Link to="/du-an" className={location == '/du-an' || location.split('/')[1] == 'du-an' ? 'header__menu__item active' : 'header__menu__item'}>
-            <p>DỰ ÁN</p>
+          <Link to="/thiet-ke-noi-that" className={location == '/thiet-ke-noi-that' || location.split('/')[1] == 'thiet-ke-noi-that' ? 'header__menu__item active' : 'header__menu__item'}>
+            <p>THIẾT KẾ NỘI THẤT</p>
           </Link>
           <Link to="/kien-thuc-nha-go" className={location == '/kien-thuc-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
-            <p>KIẾN THỨC NHÀ GỖ</p>
+            <p>CÔNG TRÌNH HOÀN THIỆN</p>
+          </Link>
+          <Link to="/kien-thuc-nha-go" className={location == '/kien-thuc-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
+            <p>PHONG CÁCH</p>
+          </Link>
+          <Link to="/kien-thuc-nha-go" className={location == '/kien-thuc-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
+            <p>KINH NGHIỆM</p>
           </Link>
           <Link to="/lien-he" className={location == '/lien-he' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>LIÊN HỆ</p>
