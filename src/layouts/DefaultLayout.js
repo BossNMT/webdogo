@@ -7,6 +7,7 @@ import PermissionContent from 'middleware/PermissionContent';
 import { Spin } from 'antd';
 import Header from './Header';
 import Footer from './Footer';
+import BoxFix from './BoxFix';
 
 const { Content } = Layout;
 
@@ -30,7 +31,7 @@ const DefaultLayout = () => {
   return (
     <Layout
       className="site-layout"
-      style={{ minHeight: '100vh' }}
+      style={{ minHeight: '100vh', position: 'relative' }}
     >
       <Suspense fallback={loading()}>
         <Header />
@@ -61,6 +62,7 @@ const DefaultLayout = () => {
       <Suspense fallback={loading()}>
         <Footer />
       </Suspense>
+      <BoxFix />
     </Layout>
   );
 };

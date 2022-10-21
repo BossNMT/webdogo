@@ -12,7 +12,8 @@
   .quill-better-table-wrapper {
     table {
       border: 1px solid black;
-      tr,td {
+      tr,
+      td {
         border: 1px solid black;
       }
     }
@@ -150,7 +151,7 @@
           font-weight: 600;
           position: relative;
           padding-bottom: 8px;
-          
+
           &::before {
             position: absolute;
             left: 0;
@@ -198,7 +199,7 @@
     justify-content: center;
     margin: 0 auto;
     cursor: pointer;
-    color: #3B3B3B;
+    color: #3b3b3b;
 
     p {
       font-size: 18px;
@@ -251,7 +252,7 @@
         text-align: center;
 
         span {
-          color: #B8741A;
+          color: #b8741a;
         }
       }
     }
@@ -297,4 +298,69 @@ h5 {
 
 p {
   font-size: 18px;
+}
+
+.bottom-box-fix {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .item {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(210, 179, 67, 0.45) !important;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px;
+
+    i {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+}
+
+.modal_datlich {
+  h1 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 32px;
+    margin: 0 0 10px;
+    color: #c8af56;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: normal;
+    color: #686868;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: #c8af56;
+    border: 2px solid #c8af56;
+    padding: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #111;
+  }
 }

@@ -1,4 +1,18 @@
 .LienHe {
-    width: 70%;
-    margin: 80px auto;
+  width: 70%;
+  margin: 50px auto;
+
+  h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #f0d57c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 35px;
+    margin: 0 0 10px;
+  }
+  
+  p {
+    margin: 0;
+  }
 }
