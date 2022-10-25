@@ -1,7 +1,7 @@
 import HttpService from 'utils/http'
 
 export const getThietKeNhaGo = () => {
-  let apiEndpoint = '/thiet-ke-noi-thats?populate=img,mau_thiet_ke_noi_thats.img&sort=createdAt:DESC';
+  let apiEndpoint = '/phong-caches?populate=img,mau_thiet_ke_noi_thats.img&sort=createdAt:DESC';
   return HttpService.get(apiEndpoint).then(res => {
     return res || {}
   }).catch(() => { return false });

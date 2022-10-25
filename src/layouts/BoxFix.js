@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
+import React, {  } from 'react';
 import { Tooltip, Modal, Form, Input, DatePicker, Radio, Button } from 'antd';
 import zalo from '../assets/images/europalace-hotline-fixed-icon2-white.png'
 import mess from '../assets/images/europalace-hotline-fixed-icon3-white.png';
 import { postLienHe } from '../modules/LienHe/api';
 import { openNotificationWithIcon } from '../helpers/funcs';
+import { useDispatch, useSelector } from 'react-redux';
+import { setIsOpenModal } from '../modules/Commons/_store/commonSlice';
 
 const BoxFix = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const dispatch = useDispatch();
+  const isOpenModalDatLich = useSelector(state => state.common.isOpenModalDatLich)
   const [form] = Form.useForm();
 
   const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
+    dispatch(setIsOpenModal(true))
   };
 
   const handleCancel = () => {
-    setIsModalOpen(false);
+    dispatch(setIsOpenModal(false))
   };
 
   const layout = {
@@ -42,7 +41,7 @@ const BoxFix = () => {
       .then(res => {
         if (res.data) {
           openNotificationWithIcon('success', 'Cảm ơn quý khách đã gửi thông tin, chúng tôi sẽ liên hệ với bạn sớm nhất có thể!')
-          setIsModalOpen(false);
+          dispatch(setIsOpenModal(false))
           form.setFieldsValue({
             name: '',
             phone: '',
@@ -82,7 +81,7 @@ const BoxFix = () => {
         </Tooltip>
       </div>
 
-      <Modal width={700} title="" open={isModalOpen} footer={null} onOk={handleOk} onCancel={handleCancel}>
+      <Modal width={700} title="" open={isOpenModalDatLich} footer={null} onCancel={handleCancel}>
         <Form {...layout} form={form} onFinish={onFinish} className='modal_datlich' validateMessages={validateMessages}>
           <h1>ĐẶT LỊCH TƯ VẤN</h1>
           <p>Để lại thông tin bên dưới, chúng tôi sẽ sắp xếp lịch tư vấn cho bạn ngay</p>

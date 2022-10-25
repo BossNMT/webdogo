@@ -25,9 +25,9 @@ export default () => {
         {data?.map((item, index) => {
           return (
             <div key={index} className='item'>
-              <img style={{ height: '100%' }} src={`${APP_CONFIG.dataUrl}${item.attributes.img.data[0].attributes.url}`} alt='Mau Thiet Ke' />
+              <Link to={`/thiet-ke-noi-that/detail/${item.id}`}><img style={{ height: '100%' }} src={`${APP_CONFIG.dataUrl}${item.attributes.img.data[0].attributes.url}`} alt='Mau Thiet Ke' /></Link>
               <div className='item__title'>
-                <Link>{item.attributes.title}</Link>
+                <Link to={`/thiet-ke-noi-that/detail/${item.id}`}>{item.attributes.title}</Link>
               </div>
             </div>
           )

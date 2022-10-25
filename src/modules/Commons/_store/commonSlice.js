@@ -1,27 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
 const commonSlice = createSlice({
   name: 'common',
-  initialState: { collapse: false, customSize: 'large' , loadingPage: false  },
+  initialState: { isOpenModalDatLich: false },
   province: [],
   district: [],
   ward: [],
   reducers: {
-    collapseLayout(state) {
-      state.collapse = !state.collapse;
-    },
-    setCustomSize(state, action) {
-      state.customSize = action.payload
-    },
-    setLoadingPage(state, action) {
-      state.loadingPage = action.payload
-    },
+    setIsOpenModal(state, action) {
+      state.isOpenModalDatLich = action.payload
+    }
   }
 })
 
 export const {
-  collapseLayout,
-  setCustomSize,
-  setLoadingPage
+  setIsOpenModal
 } = commonSlice.actions;
 
 export default commonSlice.reducer

@@ -36,7 +36,7 @@ export default () => {
   return (
     <div className='ThietKeNoiThat'>
       <div className='ThietKeNoiThat__title' style={{ background: `url(${ImgBg})` }}>
-        <h1>THIẾT KẾ NỘI THẤT</h1>
+        <h1>CÔNG TRÌNH HOÀN THIỆN</h1>
         <Slider {...settings}>
           {dataThietKe?.map((item, index) => {
             return (
@@ -51,12 +51,12 @@ export default () => {
         </Slider>
       </div>
       <div className='ThietKeNoiThat__nav'>
-        {select && <p>TRANG CHỦ / THIẾT KẾ NỘI THẤT / {select?.attributes?.title}</p>}
+        {select && <p>TRANG CHỦ / CÔNG TRÌNH HOÀN THIỆN / {select?.attributes?.title}</p>}
       </div>
       <div className='ThietKeNoiThat__list'>
-        {select?.attributes?.mau_thiet_ke_noi_thats.data.length != 0 ? select?.attributes?.mau_thiet_ke_noi_thats.data.map((item, index) => {
+        {select?.attributes?.mau_du_an_hoan_thiens.data.length != 0 ? select?.attributes?.mau_du_an_hoan_thiens.data.map((item, index) => {
           return (
-            <Link to={`/thiet-ke-noi-that/detail/${item.id}`} className='item'>
+            <Link to={`/cong-trinh-hoan-thien/detail/${item.id}`} className='item'>
               <div className='item__img'>
                 <img src={`${APP_CONFIG.dataUrl}${item.attributes.img.data[0].attributes.url}`} alt="img_thiet_ke" />
               </div>

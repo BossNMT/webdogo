@@ -28,7 +28,7 @@ const Header = () => {
                 <img src={Youtube} alt='Youtube' />
                 <div>
                   <p>Youtube</p>
-                  <h4>MAXHOMETV</h4>
+                  <h4>NOITHATMINHNGOC</h4>
                 </div>
               </Link>
               <Link to="/" className='d-flex-center item'>
@@ -42,11 +42,11 @@ const Header = () => {
                 <img src={fb} alt='Facebook' />
                 <div>
                   <p>Facebook</p>
-                  <h4>MAXHOMEVN</h4>
+                  <h4>NOITHATMINHNGOCVN</h4>
                 </div>
               </Link>
               <div className='item'>
-                <a title="Hotline" href="tel:0927748888" rel="noopener noreferrer">Hotline: 092.774.8888</a>
+                <a title="Hotline" href="tel:0927748888" rel="noopener noreferrer">Hotline: 092.124.9999</a>
               </div>
             </div>
           </div>
@@ -64,13 +64,13 @@ const Header = () => {
           <Link to="/thiet-ke-noi-that" className={location == '/thiet-ke-noi-that' || location.split('/')[1] == 'thiet-ke-noi-that' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>THIẾT KẾ NỘI THẤT</p>
           </Link>
-          <Link to="/kien-thuc-nha-go" className={location == '/kien-thuc-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
+          <Link to="/cong-trinh-hoan-thien" className={location == '/cong-trinh-hoan-thien' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>CÔNG TRÌNH HOÀN THIỆN</p>
           </Link>
-          <Link to="/kien-thuc-nha-go" className={location == '/kien-thuc-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
+          <Link to="/phong-cach" className={location == '/phong-cach' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>PHONG CÁCH</p>
           </Link>
-          <Link to="/kien-thuc-nha-go" className={location == '/kien-thuc-nha-go' ? 'header__menu__item active' : 'header__menu__item'}>
+          <Link to="/kinh-nghiem" className={location == '/kinh-nghiem' ? 'header__menu__item active' : 'header__menu__item'}>
             <p>KINH NGHIỆM</p>
           </Link>
           <Link to="/lien-he" className={location == '/lien-he' ? 'header__menu__item active' : 'header__menu__item'}>

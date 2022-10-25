@@ -8,6 +8,7 @@ import { Spin } from 'antd';
 import Header from './Header';
 import Footer from './Footer';
 import BoxFix from './BoxFix';
+import Zalo from '../assets/images/zalo-icon.png'
 
 const { Content } = Layout;
 
@@ -63,6 +64,18 @@ const DefaultLayout = () => {
         <Footer />
       </Suspense>
       <BoxFix />
+      <div className='nav_fixed'>
+        <div className='list'>
+          <div className='item'>
+            <p>092.124.9999</p>
+            <img src={Zalo} alt="icon-zalo" />
+          </div>
+          <div className='item'>
+            <p>0915.646.999</p>
+            <img src={Zalo} alt="icon-zalo" />
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };

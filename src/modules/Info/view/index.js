@@ -156,9 +156,9 @@ export default () => {
       <div style={{ background: `url(${ImgBgContact})`, backgroundRepeat: 'no-repeat', padding: '30px 0' }}>
         <div className='Info__Contact'>
           <div className='Info__Contact__info'>
-            <h2>MAXHOMEGROUP</h2>
+            <h2>NỘI THẤT MINH NGỌC</h2>
             <h4>Hotline: <span>092.124.9999</span></h4>
-            <p><span>Văn phòng:</span> Toà nhà CC2A Thanh Hà, Nguyễn Hữu Thọ, Đại Kim, Hoàng Mai, Hà Nội</p>
+            <p><span>Văn phòng:</span> Khu công nghiệp xã Vân Phúc, Phúc Thọ, Hà Nội</p>
           </div>
           <div className='Info__Contact__form'>
             <h4 className='text-center'>ĐỂ LẠI THÔNG TIN NHẬN TƯ VẤN</h4>

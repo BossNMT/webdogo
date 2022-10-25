@@ -278,26 +278,32 @@
 
 h1 {
   font-size: 30px;
+  color: #fff;
 }
 
 h2 {
   font-size: 28px;
+  color: #fff;
 }
 
 h3 {
   font-size: 26px;
+  color: #fff;
 }
 
 h4 {
   font-size: 24px;
+  color: #fff;
 }
 
 h5 {
   font-size: 22px;
+  color: #fff;
 }
 
 p {
   font-size: 18px;
+  color: #fff;
 }
 
 .bottom-box-fix {
@@ -362,5 +368,47 @@ p {
     font-weight: bold;
     text-transform: uppercase;
     color: #111;
+  }
+}
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_fixed {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  background: rgba(210, 179, 67, 0.45);
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0 5px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      padding: 5px 10px 5px 10px;
+      vertical-align: middle;
+      position: relative;
+      background: #dc8907;
+      color: #fff;
+      font-size: 15px;
+      border-radius: 3px;
+
+      p {
+        margin: 0;
+      }
+    }
   }
 }

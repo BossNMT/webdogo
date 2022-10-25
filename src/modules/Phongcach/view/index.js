@@ -36,7 +36,7 @@ export default () => {
   return (
     <div className='ThietKeNoiThat'>
       <div className='ThietKeNoiThat__title' style={{ background: `url(${ImgBg})` }}>
-        <h1>THIẾT KẾ NỘI THẤT</h1>
+        <h1>PHONG CÁCH</h1>
         <Slider {...settings}>
           {dataThietKe?.map((item, index) => {
             return (
@@ -51,7 +51,7 @@ export default () => {
         </Slider>
       </div>
       <div className='ThietKeNoiThat__nav'>
-        {select && <p>TRANG CHỦ / THIẾT KẾ NỘI THẤT / {select?.attributes?.title}</p>}
+        {select && <p>TRANG CHỦ / PHONG CÁCH / {select?.attributes?.title}</p>}
       </div>
       <div className='ThietKeNoiThat__list'>
         {select?.attributes?.mau_thiet_ke_noi_thats.data.length != 0 ? select?.attributes?.mau_thiet_ke_noi_thats.data.map((item, index) => {

@@ -1,14 +1,14 @@
-import HttpService from 'utils/http'
+import HttpService from 'utils/http';
 
 export const getThietKeNhaGo = () => {
-  let apiEndpoint = '/thiet-ke-noi-thats?populate=img,mau_thiet_ke_noi_thats.img&sort=createdAt:DESC';
+  let apiEndpoint = '/sample-du-an-hoan-thiens?populate=img,mau_du_an_hoan_thiens.img&sort=createdAt:DESC';
   return HttpService.get(apiEndpoint).then(res => {
     return res || {}
   }).catch(() => { return false });
 }
 
 export const getThietKeNhaGoDetail = (id) => {
-  let apiEndpoint = `/mau-thiet-ke-noi-thats/${id}?populate=*&sort=createdAt:DESC`;
+  let apiEndpoint = `/du-an-hoan-thiens/${id}?populate=*&sort=createdAt:DESC`;
   return HttpService.get(apiEndpoint).then(res => {
     return res || {}
   }).catch(() => { return false });
