@@ -1,6 +1,6 @@
 {
   "env": "development",
-  "apiUrl": "http://localhost:1337/api/",
+  "apiUrl": "http://api.noithatminhngoc.vn/api/",
   "user_token_key": "ustkrohtodev",
   "user_profile_key": "usinforohtodev",
   "user_refresh_token_key": "usretkrohtodev"

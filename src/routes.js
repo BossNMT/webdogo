@@ -17,7 +17,7 @@ const routes = [
   { path: '/gioi-thieu', exact: true, component: Info },
   { path: '/dich-vu', exact: true, component: DichVu },
   { path: '/thiet-ke-noi-that', exact: true, component: ThietKeNoiThat },
-  { path: '/thiet-ke-noi-that/:id', exact: true, component: ProDuctDetail },
+  { path: '/thiet-ke-noi-that/detail/:id', exact: true, component: ProDuctDetail },
   { path: '/du-an', exact: true, component: DuAn },
   { path: '/du-an/:id', exact: true, component: DuAnDetail },
   { path: '/kien-thuc-nha-go', exact: true, component: KienThuc },

@@ -1,51 +1,303 @@
 .ThietKeNoiThat {
-    &__title {
-        padding: 30px 0;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        h1 {
-            margin-bottom: 0;
-            color: #fff;
-            font-size: 29px;
-            text-transform: uppercase;
-            font-weight: normal;
-            line-height: 30px;
-            letter-spacing: 0.5px;
-            text-align: center;
-        }
-
-        .slick-slider {
-            width: 90%;
-            margin: 30px auto 0 auto;
-        }
-
-        .slick-track {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .item {
-            img {
-                width: 100%;
-                object-fit: cover;
-                height: 135px;
-            }
-
-            p {
-                font-size: 14px;
-                color: #fff;
-                letter-spacing: 1px;
-                line-height: 20px;
-                text-transform: uppercase;
-                text-align: center;
-                font-weight: 600;
-                margin-top: 16px;
-            }
-        }
+  &__title {
+    padding: 30px 0;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    h1 {
+      margin-bottom: 0;
+      color: #fff;
+      font-size: 29px;
+      text-transform: uppercase;
+      font-weight: normal;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+      text-align: center;
     }
+
+    .slick-slider {
+      width: 90%;
+      margin: 30px auto 0 auto;
+    }
+
+    .slick-track {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .item {
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 135px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 1px;
+        line-height: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__nav {
+    background-color: black;
+
+    p {
+      padding: 8px;
+      margin: 0 auto;
+      width: 85%;
+      color: #767676;
+      font-size: 14px;
+    }
+  }
+
+  &__list {
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+    // justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+
+    .item {
+      width: 30%;
+      color: #fff;
+      margin-bottom: 30px;
+
+      &__img {
+        width: 100%;
+        border: 3px solid #f1cc79;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      p {
+        font-size: 15px;
+        font-weight: normal;
+        color: #fff;
+        margin: 10px 0 0;
+        line-height: 21px;
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+      }
+
+      &:hover {
+        p {
+          color: #f1cc79;
+        }
+      }
+    }
+  }
 }
 
 .slick-dots li button:before {
-    color: #f2d77d !important;
+  color: #f2d77d !important;
+}
+
+.MauThietKeNoiThat {
+  width: 85%;
+  margin: 30px auto;
+
+  h1 {
+    font-size: 29px;
+    line-height: 35px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      content: '';
+      height: 4px;
+      width: 200px;
+      background: #fff;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: end;
+
+    &-datlich {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 20px;
+      position: relative;
+      line-height: 20px;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 600;
+      margin: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background-color: #907828;
+        cursor: pointer;
+      }
+
+      .icon {
+        i {
+          font-size: 32px;
+          font-weight: 700;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      span {
+        display: inline-block;
+        line-height: 15px;
+        font-size: 13px;
+        font-weight: normal;
+        color: #a3a3a3;
+        text-transform: none;
+        font-style: italic;
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 15px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2 {
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+  }
+}
+
+.mySwiper {
+  .swiper-wrapper {
+    height: 100px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-duan-info {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.single-duan-info table {
+  width: 100%;
+  max-width: 100% !important;
+  border-collapse: collapse;
+  border: 1px solid;
+  background: transparent;
+  border-radius: 0px;
+  border-collapse: collapse;
+  overflow: hidden;
+  // box-shadow: 0px 0px 0px 2px rgb(216 216 216 / 75%);
+  // -webkit-box-shadow: 0px 0px 0px 2px rgb(216 216 216 / 75%);
+  // -moz-box-shadow: 0px 0px 0px 2px rgba(216, 216, 216, 0.75);
+}
+
+.single-duan-info th,
+.single-duan-info td {
+  border: 1px solid;
+  line-height: 23px;
+  padding: 10px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.single-duan-info strong {
+  font-weight: normal;
+  color: #f1cc79;
 }

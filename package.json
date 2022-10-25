@@ -48,7 +48,8 @@
     "react-slick": "^0.29.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.8",
