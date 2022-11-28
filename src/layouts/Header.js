@@ -5,8 +5,10 @@ import tiktok from 'assets/images/tiktok.png';
 import fb from 'assets/images/fb.png';
 
 import { Link, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const allInfo = useSelector(state => state.common.allInfo)
   const location = useLocation().pathname;
   console.log(location)
 
@@ -24,29 +26,29 @@ const Header = () => {
               </Link>
             </div>
             <div className='header__logo__info'>
-              <Link to="/" className='d-flex-center item'>
+              <a target="_blank" href={allInfo?.linkYoutube} className='d-flex-center item' rel="noreferrer">
                 <img src={Youtube} alt='Youtube' />
                 <div>
                   <p>Youtube</p>
                   <h4>NOITHATMINHNGOC</h4>
                 </div>
-              </Link>
-              <Link to="/" className='d-flex-center item'>
+              </a>
+              <a target="_blank" href={allInfo?.linkTiktok} className='d-flex-center item' rel="noreferrer">
                 <img src={tiktok} alt='TikTok' />
                 <div>
                   <p>Tiktok</p>
                   <h4>XAYDUNGNHACUA</h4>
                 </div>
-              </Link>
-              <Link to="/" className='d-flex-center item'>
+              </a>
+              <a target="_blank" href={allInfo?.linkFacebook} className='d-flex-center item' rel="noreferrer">
                 <img src={fb} alt='Facebook' />
                 <div>
                   <p>Facebook</p>
                   <h4>NOITHATMINHNGOCVN</h4>
                 </div>
-              </Link>
+              </a>
               <div className='item'>
-                <a title="Hotline" href="tel:0927748888" rel="noopener noreferrer">Hotline: 092.124.9999</a>
+                <a title="Hotline" href={`tel:${allInfo?.Hotline}`} rel="noopener noreferrer">Hotline: {allInfo?.Hotline}</a>
               </div>
             </div>
           </div>

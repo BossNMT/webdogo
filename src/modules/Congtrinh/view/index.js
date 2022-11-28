@@ -54,7 +54,7 @@ export default () => {
         {select && <p>TRANG CHỦ / CÔNG TRÌNH HOÀN THIỆN / {select?.attributes?.title}</p>}
       </div>
       <div className='ThietKeNoiThat__list'>
-        {select?.attributes?.mau_du_an_hoan_thiens.data.length != 0 ? select?.attributes?.mau_du_an_hoan_thiens.data.map((item, index) => {
+        {select?.attributes?.du_an_hoan_thiens.data.length != 0 ? select?.attributes?.du_an_hoan_thiens.data.map((item, index) => {
           return (
             <Link to={`/cong-trinh-hoan-thien/detail/${item.id}`} className='item'>
               <div className='item__img'>

@@ -55,3 +55,11 @@ export const getListTuVan = () => {
     return res || {}
   }).catch(() => { return false });
 }
+
+
+export const getAllInfo = () => {
+  let apiEndpoint = '/tat-ca-thong-tin';
+  return HttpService.get(apiEndpoint).then(res => {
+    return res || {}
+  }).catch(() => { return false });
+}

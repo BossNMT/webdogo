@@ -10,6 +10,7 @@ import { setIsOpenModal } from '../modules/Commons/_store/commonSlice';
 const BoxFix = () => {
   const dispatch = useDispatch();
   const isOpenModalDatLich = useSelector(state => state.common.isOpenModalDatLich)
+  const allInfo = useSelector(state => state.common.allInfo)
   const [form] = Form.useForm();
 
   const showModal = () => {
@@ -64,18 +65,18 @@ const BoxFix = () => {
             <i className='icon-calendar-full'></i>
           </a>
         </Tooltip>
-        <Tooltip placement="leftTop" title={'Hotline: 092.124.9999'}>
-          <a href="tel:84921249999" className='item'>
+        <Tooltip placement="leftTop" title={`Hotline: ${allInfo?.Hotline}`}>
+          <a href={`tel: ${allInfo?.Hotline}`} className='item'>
             <i className='icon-phone-handset'></i>
           </a>
         </Tooltip>
         <Tooltip placement="leftTop" title={'Nhắn tin qua Zalo'}>
-          <a className='item'>
+          <a className='item' href={allInfo?.linkZalo} target="_blank" rel="noreferrer">
             <img src={zalo} alt="europalace-hotline-fixed-icon2-white.png" />
           </a>
         </Tooltip>
         <Tooltip placement="leftTop" title={'Nhắn tin qua Messenger'}>
-          <a className='item'>
+          <a className='item' href={allInfo?.linkMessenger} target="_blank" rel="noreferrer">
             <img src={mess} alt="europalace-hotline-fixed-icon3-white.png" />
           </a>
         </Tooltip>

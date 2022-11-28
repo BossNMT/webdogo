@@ -2,18 +2,22 @@ import { createSlice } from '@reduxjs/toolkit'
 const commonSlice = createSlice({
   name: 'common',
   initialState: { isOpenModalDatLich: false },
-  province: [],
+  allInfo: {},
   district: [],
   ward: [],
   reducers: {
     setIsOpenModal(state, action) {
       state.isOpenModalDatLich = action.payload
+    },
+    setAllInfo(state, action) {
+      state.allInfo = action.payload
     }
   }
 })
 
 export const {
-  setIsOpenModal
+  setIsOpenModal,
+  setAllInfo
 } = commonSlice.actions;
 
 export default commonSlice.reducer

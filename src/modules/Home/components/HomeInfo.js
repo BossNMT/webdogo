@@ -21,7 +21,7 @@ export default () => {
 
   return (
     <div className='Home__info'>
-      <h2 className='Home__info__title'>MAXHOMEGROUP – CHUYÊN GIA 10+ NĂM KINH NGHIỆM THIẾT KẾ THI NỘI THẤT TRỌN GÓI</h2>
+      <h2 className='Home__info__title'>NỘI THẤT MINH NGỌC – CHUYÊN GIA 10+ NĂM KINH NGHIỆM THIẾT KẾ THI NỘI THẤT TRỌN GÓI</h2>
       <div className='d-flex justify-content-between' style={{ marginTop: '24px' }}>
         <div style={{ width: '60%', height: '100%' }}>
           <Link style={{ fontSize: '36px', color: '#fff', marginBottom: '16px', display: 'block' }}>Giới Thiệu</Link>

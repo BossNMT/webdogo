@@ -1,9 +1,11 @@
 import React from 'react';
-import Logo from 'assets/images/logo.png';
+import Logo from 'assets/images/logo2.jpg';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 export default () => {
+  const allInfo = useSelector(state => state.common.allInfo)
   return (
     <footer className="footer">
       <div className='footer__container'>
@@ -13,10 +15,10 @@ export default () => {
         <div className='footer__info'>
           <div className='item'>
             <h4 className='title'>THÔNG TIN LIÊN HỆ</h4>
-            <h5>CÔNG TY CỔ PHẦN KIẾN TRÚC VÀ XÂY DỰNG MAXHOME</h5>
-            <p>Địa chỉ xưởng: khu công nghiệp xã Vân Phúc, Phúc Thọ, Hà Nội</p>
-            <p>Liên hệ: 092.124.9999 (chị Thủy) - 0915.646.999 (anh Ngọc)</p>
-            <p>Email: noithatminhngoc.vn@gmail.com</p>
+            <h5>{allInfo?.titleCty}</h5>
+            <p>Địa chỉ xưởng: {allInfo?.diachi}</p>
+            <p>Liên hệ: {allInfo?.lienhe}</p>
+            <p>Email: {allInfo?.email}</p>
             <p>Làm việc: 8h - 18h tất cả các ngày trong tuần</p>
           </div>
           <div className='item'>

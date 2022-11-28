@@ -9,6 +9,9 @@ import Header from './Header';
 import Footer from './Footer';
 import BoxFix from './BoxFix';
 import Zalo from '../assets/images/zalo-icon.png'
+import { getAllInfo } from '../modules/Home/api';
+import { useDispatch } from 'react-redux';
+import { setAllInfo } from '../modules/Commons/_store/commonSlice';
 
 const { Content } = Layout;
 
@@ -23,11 +26,25 @@ const Page404 = Loadable({
 });
 
 const DefaultLayout = () => {
+  const dispatch = useDispatch();
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => {
+    handleCallAllInfo();
+  }, [])
+
+  const handleCallAllInfo = () => {
+    getAllInfo()
+      .then(res => {
+        if (res) {
+          dispatch(setAllInfo(res.data.data.attributes))
+        }
+      })
+  }
 
   return (
     <Layout
